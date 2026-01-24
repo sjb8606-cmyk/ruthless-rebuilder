@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { HeroSection } from "@/components/ui/hero-section";
 import { SectionHeader } from "@/components/ui/section-header";
 import Layout from "@/components/layout/Layout";
+import { ImpactSection } from "@/components/ui/impact-section";
 import { ArrowRight, Quote, Shield, Zap, Brain, Heart } from "lucide-react";
 
 const Story = () => {
@@ -240,6 +241,9 @@ const Story = () => {
           </div>
         </div>
       </section>
+
+      {/* Impact Section */}
+      <ImpactSection />
 
       {/* CTA */}
       <section className="py-20">
