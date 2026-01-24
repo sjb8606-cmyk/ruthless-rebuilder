@@ -13,11 +13,15 @@ import {
   Bot,
   Code2,
   Globe,
-  Palette,
+  FileText,
   Video,
   ArrowRight,
   Clock,
   Rocket,
+  Mail,
+  ClipboardList,
+  PackageCheck,
+  Users,
 } from "lucide-react";
 
 const Index = () => {
@@ -113,7 +117,8 @@ const Index = () => {
             title="Services Available Now"
             subtitle="AI accelerates delivery. Humans verify quality."
           />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Top row - 3 cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-6">
             <ServiceCard
               icon={Bot}
               title="Ops Assistant"
@@ -136,8 +141,11 @@ const Index = () => {
               description="A working backend prototype in 1–2 weeks with clean handoff."
               href="/services"
             />
+          </div>
+          {/* Bottom row - 2 cards centered */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <ServiceCard
-              icon={Globe}
+              icon={FileText}
               title="Website & Business Copy"
               subtitle="Copy Systems"
               description="Fix your clarity. Remove friction. Convert more visitors."
@@ -151,8 +159,8 @@ const Index = () => {
               href="/services"
             />
           </div>
-          <div className="text-center mt-8">
-            <Button asChild variant="outline">
+          <div className="text-center mt-10">
+            <Button asChild size="lg">
               <Link to="/services">
                 View All Services <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -164,34 +172,42 @@ const Index = () => {
       {/* How It Works */}
       <section className="py-20 bg-card">
         <div className="section-container">
-          <SectionHeader title="How It Works" />
-          <div className="max-w-2xl mx-auto space-y-8">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-center mb-16">
+            How It Works
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <ProcessStep
               number={1}
+              icon={Mail}
               title="Email what you need"
               description="Send a short description + links/files."
             />
             <ProcessStep
               number={2}
+              icon={ClipboardList}
               title="Scope + fixed price"
               description="You get a bounded deliverables list and tier recommendation."
             />
             <ProcessStep
               number={3}
+              icon={PackageCheck}
               title="Delivery + verification notes"
               description="Work ships clean with Proof Pack or Proof Pack Lite where applicable."
             />
             <ProcessStep
               number={4}
+              icon={Users}
               title="Optional support"
               description="If needed, we continue monthly. If not, we close clean."
             />
           </div>
           <div className="text-center mt-12">
             <Button asChild size="lg">
-              <a href="mailto:ruthlesstechnologies@proton.me">Email to Start</a>
+              <a href="mailto:ruthlesstechnologies@proton.me">
+                Email to Start <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
             </Button>
-            <p className="text-xs text-muted-foreground mt-2">
+            <p className="text-sm text-muted-foreground mt-4">
               No meetings required. No sales theater.
             </p>
           </div>
