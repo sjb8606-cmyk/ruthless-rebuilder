@@ -25,7 +25,7 @@ const Footer = () => {
       links: [
         { name: "FAQ", href: "/faq" },
         { name: "Contact", href: "/contact" },
-        { name: "Email Us", href: "mailto:ruthlesstechnologies@proton.me", external: true },
+        { name: "ruthlesstechnologies@proton.me", href: "mailto:ruthlesstechnologies@proton.me", external: true },
       ],
     },
     {
