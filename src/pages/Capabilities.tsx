@@ -124,6 +124,17 @@ const Capabilities = () => {
               </div>
             </div>
           </div>
+          
+          {/* Alternative Stacks Card */}
+          <div className="max-w-4xl mx-auto mt-8">
+            <div className="card-hostile">
+              <h3 className="font-serif text-lg font-bold mb-2">Alternative Stacks</h3>
+              <p className="text-sm text-muted-foreground">
+                Other technology stacks can be supported when there is a clear operational, regulatory, or integration requirement.
+                Deviations from the preferred stack are intentional, scoped, and documented.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
