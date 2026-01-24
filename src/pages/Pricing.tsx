@@ -5,6 +5,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { PricingCard } from "@/components/ui/pricing-card";
 import Layout from "@/components/layout/Layout";
 import { Badge } from "@/components/ui/badge";
+import { ImpactSection } from "@/components/ui/impact-section";
 import { XCircle, CreditCard, ArrowRight } from "lucide-react";
 
 const Pricing = () => {
@@ -237,6 +238,9 @@ const Pricing = () => {
           </div>
         </div>
       </section>
+
+      {/* Impact Section */}
+      <ImpactSection />
 
       {/* Payment Terms */}
       <section className="py-20 bg-card">

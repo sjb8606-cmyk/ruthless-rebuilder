@@ -6,6 +6,7 @@ import { ServiceCard } from "@/components/ui/service-card";
 import { ProcessStep } from "@/components/ui/process-step";
 import { FeatureCard } from "@/components/ui/feature-card";
 import Layout from "@/components/layout/Layout";
+import { ImpactSection } from "@/components/ui/impact-section";
 import {
   Target,
   Shield,
@@ -168,6 +169,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Impact Section */}
+      <ImpactSection />
 
       {/* How It Works */}
       <section className="py-20 bg-card">
