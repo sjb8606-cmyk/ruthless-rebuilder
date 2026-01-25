@@ -10,7 +10,9 @@ import {
   Video,
   ArrowRight,
   CheckCircle2,
+  Shield,
 } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import { LucideIcon } from "lucide-react";
 
 interface ServiceDetailProps {
@@ -21,6 +23,7 @@ interface ServiceDetailProps {
   features: string[];
   linkHref?: string;
   linkText?: string;
+  isFree?: boolean;
 }
 
 const ServiceDetail = ({
@@ -31,6 +34,7 @@ const ServiceDetail = ({
   features,
   linkHref,
   linkText,
+  isFree,
 }: ServiceDetailProps) => {
   return (
     <div className="card-hostile">
@@ -38,8 +42,15 @@ const ServiceDetail = ({
         <div className="w-12 h-12 rounded-sm bg-primary/10 flex items-center justify-center flex-shrink-0">
           <Icon className="w-6 h-6 text-primary" />
         </div>
-        <div>
-          <h3 className="font-serif text-xl font-bold">{title}</h3>
+        <div className="flex-1">
+          <div className="flex items-center gap-2">
+            <h3 className="font-serif text-xl font-bold">{title}</h3>
+            {isFree && (
+              <Badge className="bg-green-500/20 text-green-400 border-green-500/30 hover:bg-green-500/30">
+                FREE
+              </Badge>
+            )}
+          </div>
           <p className="text-sm text-primary">{subtitle}</p>
         </div>
       </div>
@@ -137,6 +148,22 @@ const Services = () => {
         "Platform-specific adaptation",
         "Engagement optimization",
       ],
+    },
+    {
+      icon: Shield,
+      title: "Child Safety AI Prompt Pack",
+      subtitle: "FREE",
+      description:
+        "A constitutionally anchored prompt system for supervised child AI use. Permanently free.",
+      features: [
+        "Immutable constitutional rules",
+        "Password protection for modifications",
+        "Age-appropriate safety boundaries",
+        "Designed for parental supervision",
+      ],
+      linkHref: "/child-safety",
+      linkText: "Get the Free Prompt Pack",
+      isFree: true,
     },
   ];
 
