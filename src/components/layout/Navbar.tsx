@@ -26,6 +26,7 @@ const Navbar = () => {
     { name: "Compassion Economy", href: "/compassion-economy" },
     { name: "Capabilities", href: "/capabilities" },
     { name: "Waitlist", href: "/waitlist" },
+    { name: "Child Safety Prompt Pack", href: "/child-safety" },
   ];
 
   return (
