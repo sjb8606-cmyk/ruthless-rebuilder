@@ -25,9 +25,11 @@ interface ProductCardProps {
   name: string;
   description: string;
   stage: "ready" | "prototype" | "concept" | "dream";
+  linkHref?: string;
+  linkText?: string;
 }
 
-const ProductCard = ({ icon: Icon, name, description, stage }: ProductCardProps) => {
+const ProductCard = ({ icon: Icon, name, description, stage, linkHref, linkText }: ProductCardProps) => {
   const stageColors = {
     ready: "bg-green-500/20 text-green-400 border-green-500/30",
     prototype: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
@@ -53,7 +55,15 @@ const ProductCard = ({ icon: Icon, name, description, stage }: ProductCardProps)
         </Badge>
       </div>
       <h3 className="font-serif font-semibold mb-1">{name}</h3>
-      <p className="text-sm text-muted-foreground">{description}</p>
+      <p className="text-sm text-muted-foreground mb-3">{description}</p>
+      {linkHref && (
+        <Link
+          to={linkHref}
+          className="inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
+        >
+          {linkText || "Learn More"} <ArrowRight className="w-4 h-4" />
+        </Link>
+      )}
     </div>
   );
 };
@@ -78,6 +88,13 @@ const ComingSoon = () => {
   ];
 
   const prototypeProducts = [
+    {
+      icon: Shield,
+      name: "Child Safety AI Prompt Pack (Hosted SaaS)",
+      description: "Hosted version of the free Child Safety AI Prompt Pack. Child safety prioritized over revenue; free or cost-covering pricing.",
+      linkHref: "/child-safety",
+      linkText: "Get the Free Prompt Pack Now",
+    },
     {
       icon: Box,
       name: "QCore",
@@ -158,7 +175,7 @@ const ComingSoon = () => {
             title="Prototype Phase"
             subtitle="Active development with core functionality being validated."
           />
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {prototypeProducts.map((product) => (
               <ProductCard
                 key={product.name}
@@ -166,6 +183,8 @@ const ComingSoon = () => {
                 name={product.name}
                 description={product.description}
                 stage="prototype"
+                linkHref={product.linkHref}
+                linkText={product.linkText}
               />
             ))}
           </div>
