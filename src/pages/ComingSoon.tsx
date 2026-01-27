@@ -91,7 +91,7 @@ const ComingSoon = () => {
     {
       icon: Shield,
       name: "Child Safety AI Prompt Pack (Hosted SaaS)",
-      description: "Hosted version of the free Child Safety AI Prompt Pack. Child safety prioritized over revenue; free or cost-covering pricing.",
+      description: "A managed, web-based version of our free Child Safety AI Prompt Pack. No downloads, no setup — just safe, supervised AI access for children. Child safety comes first. This system will either remain free or be priced only to cover operational costs. There is no profit motive.",
       linkHref: "/child-safety",
       linkText: "Get the Free Prompt Pack Now",
     },
