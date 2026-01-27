@@ -98,22 +98,22 @@ const ComingSoon = () => {
     {
       icon: Box,
       name: "QCore",
-      description: "Quality control and verification infrastructure for AI outputs.",
+      description: "Quality control and verification infrastructure for AI-generated outputs. Designed to detect errors, inconsistencies, and trust breakdowns before results are used or shared.",
     },
     {
       icon: Store,
       name: "AgoraX",
-      description: "Hostile-environment marketplace infrastructure with built-in trust systems.",
+      description: "Marketplace and exchange infrastructure designed for use in hostile or low-trust environments. Focuses on verification, reputation, and safe coordination between unknown parties.",
     },
     {
       icon: Hammer,
       name: "CrystalForge",
-      description: "Structured prompt engineering and testing workbench.",
+      description: "A structured prompt engineering and testing workbench for building, refining, and validating AI prompts at scale.",
     },
     {
       icon: Shield,
       name: "AegisForge",
-      description: "Agent safety and governance framework for production AI.",
+      description: "An AI safety, governance, and risk-simulation framework for evaluating system behavior before deployment.",
     },
   ];
 
