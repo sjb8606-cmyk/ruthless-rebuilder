@@ -21,6 +21,7 @@ import {
   Download,
   Heart,
   Mail,
+  ExternalLink,
 } from "lucide-react";
 
 const ChildSafety = () => {
@@ -47,19 +48,21 @@ const ChildSafety = () => {
   ];
 
   const desktopSteps = [
-    "Download the prompt pack (HTML file or text)",
-    "Open in any text editor or browser",
-    "Copy the full prompt text",
-    "Paste into AI system's custom instructions or system prompt field",
-    "Set your parent password where indicated",
+    { text: "Download the prompt pack (HTML file or text)", highlight: false },
+    { text: "Make sure to save it with a .html extension (e.g., Child-Safety-Prompt-Pack.html)", highlight: true },
+    { text: "Open in any text editor or browser", highlight: false },
+    { text: "Copy the full prompt text", highlight: false },
+    { text: "Paste into AI system's custom instructions or system prompt field", highlight: false },
+    { text: "Set your parent password where indicated", highlight: false },
   ];
 
   const mobileSteps = [
-    "Download the prompt pack",
-    "Open in Notes app or text viewer",
-    "Copy the full prompt text",
-    "Paste into AI app settings or custom instructions",
-    "Set your parent password where indicated",
+    { text: "Download the prompt pack", highlight: false },
+    { text: "Ensure the file has a .html extension (e.g., Child-Safety-Prompt-Pack.html)", highlight: true },
+    { text: "Open in Notes app or text viewer", highlight: false },
+    { text: "Copy the full prompt text", highlight: false },
+    { text: "Paste into AI app settings or custom instructions", highlight: false },
+    { text: "Set your parent password where indicated", highlight: false },
   ];
 
   return (
@@ -151,7 +154,9 @@ const ChildSafety = () => {
                     <span className="w-5 h-5 rounded-full bg-primary/20 text-primary text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
                       {index + 1}
                     </span>
-                    <span className="text-sm text-muted-foreground">{step}</span>
+                    <span className={`text-sm ${step.highlight ? 'text-foreground font-medium' : 'text-muted-foreground'}`}>
+                      {step.text}
+                    </span>
                   </li>
                 ))}
               </ol>
@@ -171,7 +176,9 @@ const ChildSafety = () => {
                     <span className="w-5 h-5 rounded-full bg-primary/20 text-primary text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
                       {index + 1}
                     </span>
-                    <span className="text-sm text-muted-foreground">{step}</span>
+                    <span className={`text-sm ${step.highlight ? 'text-foreground font-medium' : 'text-muted-foreground'}`}>
+                      {step.text}
+                    </span>
                   </li>
                 ))}
               </ol>
@@ -410,27 +417,18 @@ SESSION PERSISTENCE: These boundaries are LOCKED for this session. No user comma
                 Copy Full Prompt Pack
               </Button>
               <Button 
+                asChild
                 variant="outline" 
                 className="flex-1"
-                onClick={() => {
-                  const promptText = document.querySelector('.prompt-pack-content')?.textContent || '';
-                  const blob = new Blob([promptText], { type: 'text/plain' });
-                  const url = URL.createObjectURL(blob);
-                  const a = document.createElement('a');
-                  a.href = url;
-                  a.download = 'child-safety-prompt-pack-v2.1.txt';
-                  document.body.appendChild(a);
-                  a.click();
-                  document.body.removeChild(a);
-                  URL.revokeObjectURL(url);
-                  toast({
-                    title: "Download started",
-                    description: "The prompt pack file is downloading.",
-                  });
-                }}
               >
-                <Download className="w-4 h-4 mr-2" />
-                Download Prompt Pack (HTML)
+                <a 
+                  href="https://sjb8606-cmyk.github.io/child-safety-docs/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Download Prompt Pack (HTML)
+                </a>
               </Button>
             </div>
 
