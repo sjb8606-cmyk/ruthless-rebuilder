@@ -187,23 +187,9 @@ const ComingSoon = () => {
             title="Prototype Phase"
             subtitle="Active development with core functionality being validated."
           />
-          {/* Top row: 3 cards */}
-          <div className="grid md:grid-cols-3 gap-6 mb-6">
-            {prototypeProducts.slice(0, 3).map((product) => (
-              <ProductCard
-                key={product.name}
-                icon={product.icon}
-                name={product.name}
-                description={product.description}
-                stage="prototype"
-                linkHref={product.linkHref}
-                linkText={product.linkText}
-              />
-            ))}
-          </div>
-          {/* Bottom row: 2 cards centered */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            {prototypeProducts.slice(3).map((product) => (
+          {/* 2x2 grid layout */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {prototypeProducts.map((product) => (
               <ProductCard
                 key={product.name}
                 icon={product.icon}
@@ -225,8 +211,21 @@ const ComingSoon = () => {
             title="Concept Stage"
             subtitle="Early exploration and design validation."
           />
-          <div className="grid md:grid-cols-3 gap-6">
-            {conceptProducts.map((product) => (
+          {/* Top row: 3 cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-6">
+            {conceptProducts.slice(0, 3).map((product) => (
+              <ProductCard
+                key={product.name}
+                icon={product.icon}
+                name={product.name}
+                description={product.description}
+                stage="concept"
+              />
+            ))}
+          </div>
+          {/* Bottom row: 2 cards centered */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            {conceptProducts.slice(3).map((product) => (
               <ProductCard
                 key={product.name}
                 icon={product.icon}
