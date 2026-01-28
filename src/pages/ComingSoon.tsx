@@ -107,6 +107,11 @@ const ComingSoon = () => {
       name: "AgoraX",
       description: "Marketplace and exchange infrastructure designed for use in hostile or low-trust environments. Focuses on verification, reputation, and safe coordination between unknown parties.",
     },
+    {
+      icon: Hammer,
+      name: "CrystalForge",
+      description: "A software supply chain security and compliance orchestrator. CrystalForge generates cryptographically verifiable \"Crystals\" for every build, linking source code, SBOMs, policy checks, and technical debt reports to create immutable, audit-ready evidence for regulated or high-stakes software environments.",
+    },
   ];
 
   const conceptProducts = [
@@ -124,11 +129,6 @@ const ComingSoon = () => {
       icon: Shield,
       name: "AegisForge Core",
       description: "A high-assurance transaction and verification engine for sensitive digital operations. Every action is cryptographically sealed with Post-Quantum Cryptography (PQC), optionally proven with zero-knowledge proofs, and logged in an immutable chain — creating legally robust, auditable evidence for long-term trust in finance, legal tech, and defense.",
-    },
-    {
-      icon: Hammer,
-      name: "CrystalForge",
-      description: "A software supply chain security and compliance orchestrator. CrystalForge generates cryptographically verifiable \"Crystals\" for every build, linking source code, SBOMs, policy checks, and technical debt reports to create immutable, audit-ready evidence for regulated or high-stakes software environments.",
     },
     {
       icon: Search,
