@@ -17,6 +17,8 @@ import {
   Stethoscope,
   ChefHat,
   Clock,
+  Home,
+  Search,
 } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
@@ -73,17 +75,17 @@ const ComingSoon = () => {
     {
       icon: Bot,
       name: "Service Bots",
-      description: "Automation-enhanced virtual assistants with human verification checkpoints.",
+      description: "Automation-focused AI services designed to perform specific tasks reliably, with human verification checkpoints where safety or accuracy matters.",
     },
     {
       icon: Calendar,
       name: "Pet Planner AI",
-      description: "Intelligent scheduling and care coordination for pet owners.",
+      description: "AI-assisted planning and reminders to help pet owners manage care routines, schedules, and day-to-day coordination responsibly.",
     },
     {
       icon: Sparkles,
       name: "Delight Engine",
-      description: "Content optimization and engagement prediction system.",
+      description: "Enterprise AI orchestration platform for building, managing, and deploying AI bots with workflow automation, content optimization, and engagement prediction.",
     },
   ];
 
@@ -110,23 +112,33 @@ const ComingSoon = () => {
       name: "CrystalForge",
       description: "A structured prompt engineering and testing workbench for building, refining, and validating AI prompts at scale.",
     },
-    {
-      icon: Shield,
-      name: "AegisForge",
-      description: "An AI safety, governance, and risk-simulation framework for evaluating system behavior before deployment.",
-    },
   ];
 
   const conceptProducts = [
     {
       icon: Stethoscope,
       name: "Clinic Planner AI",
-      description: "Healthcare scheduling optimization with safety-first design.",
+      description: "AI-supported scheduling and follow-up coordination for healthcare environments, built with a safety-first and compliance-aware approach.",
+    },
+    {
+      icon: Home,
+      name: "Shelter Planner AI",
+      description: "A zero-trust, audit-grade system that turns shelter and foster network care into verifiable, insurable records. Tracks every animal, caregiver, and incident with immutable accountability, providing a single source of truth for operational, legal, and insurance purposes.",
+    },
+    {
+      icon: Shield,
+      name: "AegisForge Core",
+      description: "A high-assurance transaction and verification engine for sensitive digital operations. Every action is cryptographically sealed with Post-Quantum Cryptography (PQC), optionally proven with zero-knowledge proofs, and logged in an immutable chain — creating legally robust, auditable evidence for long-term trust in finance, legal tech, and defense.",
+    },
+    {
+      icon: Search,
+      name: "Quantum SEO Blacksite",
+      description: "A specialized SEO analytics layer that uses AegisForge Core to securely track ranking shifts, algorithmic impact, and site performance. Every report is cryptographically signed with Post-Quantum Cryptography (PQC), providing immutable evidence of historical SEO events.",
     },
     {
       icon: ChefHat,
       name: "Sous Chef Vision",
-      description: "Intelligent meal planning and kitchen workflow automation.",
+      description: "An intelligent meal planning and kitchen workflow assistant designed to reduce friction in everyday cooking and preparation.",
     },
   ];
 
@@ -213,7 +225,7 @@ const ComingSoon = () => {
             title="Concept Stage"
             subtitle="Early exploration and design validation."
           />
-          <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6">
             {conceptProducts.map((product) => (
               <ProductCard
                 key={product.name}
