@@ -105,12 +105,12 @@ const ComingSoon = () => {
     {
       icon: Store,
       name: "AgoraX",
-      description: "Marketplace and exchange infrastructure designed for use in hostile or low-trust environments. Focuses on verification, reputation, and safe coordination between unknown parties.",
+      description: "Marketplace and exchange infrastructure designed for use in hostile or low-trust environments. Focuses on verification, reputation, and safe coordination between unknown parties.\n\nDesigned as a unified asset layer where identity, escrow, reputation, and settlement operate within a single verifiable system.\n\nBuilt to function when trust is constrained, assumptions fail, and coordination must remain provable.",
     },
     {
       icon: Hammer,
       name: "CrystalForge",
-      description: "A software supply chain security and compliance orchestrator. CrystalForge generates cryptographically verifiable \"Crystals\" for every build, linking source code, SBOMs, policy checks, and technical debt reports to create immutable, audit-ready evidence for regulated or high-stakes software environments.",
+      description: "A software supply chain security and compliance orchestrator. CrystalForge generates cryptographically verifiable \"Crystals\" for every build, linking source code, SBOMs, policy checks, and technical debt reports to create immutable, audit-ready evidence for regulated or high-stakes software environments.\n\nArchitected for zero-trust environments where compliance, provenance, and chain of custody must be enforced — not assumed.\n\nDesigned for sectors where a compromised build is not just a bug, but an operational or systemic risk.",
     },
   ];
 

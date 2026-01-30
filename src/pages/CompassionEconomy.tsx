@@ -157,6 +157,46 @@ const CompassionEconomy = () => {
         </div>
       </section>
 
+      {/* The Public Ledger */}
+      <section className="py-20">
+        <div className="section-container">
+          <div className="max-w-3xl mx-auto text-center">
+            <SectionHeader title="The Public Ledger" />
+            <p className="text-lg text-muted-foreground mb-6">
+              <span className="text-foreground font-medium">Trust isn't claimed. It's verified.</span>
+            </p>
+            <p className="text-muted-foreground mb-6">
+              We run the Compassion Economy on AgoraX, our internal asset registry and escrow system.
+            </p>
+            <p className="text-muted-foreground mb-4">
+              Every transfer from the Compassion Fund is recorded as a verifiable transaction:
+            </p>
+            <div className="grid sm:grid-cols-2 gap-3 text-left max-w-xl mx-auto mb-6">
+              {[
+                "Recipients are identity-verified organizations",
+                "Each transfer receives a unique registry ID",
+                "Funds move through controlled escrow",
+                "The ledger is public and auditable",
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-2 p-3 bg-background rounded-sm border border-border">
+                  <span className="text-primary">✓</span>
+                  <span className="text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-muted-foreground mb-2">
+              You don't have to believe us.
+            </p>
+            <p className="text-foreground font-medium mb-4">
+              You can check the math.
+            </p>
+            <p className="text-sm italic text-primary">
+              This is what "receipts always" actually means.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Why This Matters */}
       <section className="py-20 bg-card">
         <div className="section-container">

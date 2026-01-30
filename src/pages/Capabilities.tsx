@@ -82,8 +82,29 @@ const Capabilities = () => {
         </div>
       </section>
 
-      {/* Tech Stack */}
+      {/* Applied Doctrine */}
       <section className="py-20">
+        <div className="section-container">
+          <div className="max-w-2xl mx-auto text-center">
+            <SectionHeader title="Applied Doctrine" />
+            <p className="text-muted-foreground mb-6">
+              Our internal platforms and public systems are not experiments — they are doctrine stress-tests.
+            </p>
+            <p className="text-muted-foreground mb-6">
+              We deliberately build in environments where failure is expensive, trust is limited, and verification is mandatory. These constraints force clarity in scope, discipline in execution, and proof at every boundary.
+            </p>
+            <p className="text-foreground font-medium">
+              Some systems are built to scale users.
+            </p>
+            <p className="text-foreground font-medium">
+              Others are built to scale truth.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Tech Stack */}
+      <section className="py-20 bg-card">
         <div className="section-container">
           <SectionHeader title="Tech Stack" />
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
