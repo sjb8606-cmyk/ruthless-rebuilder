@@ -416,17 +416,11 @@ SESSION PERSISTENCE: These boundaries are LOCKED for this session. No user comma
                 <Copy className="w-4 h-4 mr-2" />
                 Copy Full Prompt Pack
               </Button>
-              <Button 
-                asChild
-                variant="outline" 
-                className="flex-1"
-              >
-                <a 
-                  href="https://sjb8606-cmyk.github.io/child-safety-docs/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+              <Button asChild variant="outline" className="flex-1">
+                <a
+                  href="https://raw.githubusercontent.com/sjb8606-cmyk/child-safety-docs/main/index.zip"
+                  download
                 >
-                  <ExternalLink className="w-4 h-4 mr-2" />
                   Download Prompt Pack (HTML)
                 </a>
               </Button>
