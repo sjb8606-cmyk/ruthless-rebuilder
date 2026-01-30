@@ -170,6 +170,28 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Products in Development */}
+      <section className="py-20 bg-card">
+        <div className="section-container">
+          <SectionHeader
+            title="Products in Development"
+          />
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-muted-foreground mb-4">
+              In addition to client services, we are building a portfolio of both internal platform systems and public-facing AI products.
+            </p>
+            <p className="text-muted-foreground mb-8">
+              Some tools are infrastructure-first. Others are designed for everyday use. All are built under the same hostile-environment doctrine.
+            </p>
+            <Button asChild size="lg">
+              <Link to="/coming-soon">
+                Explore products in development <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Impact Section */}
       <ImpactSection />
 
