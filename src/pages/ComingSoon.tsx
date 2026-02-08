@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 import { HeroSection } from "@/components/ui/hero-section";
 import { SectionHeader } from "@/components/ui/section-header";
 import Layout from "@/components/layout/Layout";
@@ -26,20 +27,22 @@ interface ProductCardProps {
   icon: LucideIcon;
   name: string;
   description: string;
-  stage: "ready" | "prototype" | "concept" | "dream";
+  stage: "live" | "ready" | "prototype" | "concept" | "dream";
   linkHref?: string;
   linkText?: string;
 }
 
 const ProductCard = ({ icon: Icon, name, description, stage, linkHref, linkText }: ProductCardProps) => {
   const stageColors = {
-    ready: "bg-green-500/20 text-green-400 border-green-500/30",
+    live: "bg-green-500/20 text-green-400 border-green-500/30",
+    ready: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
     prototype: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
     concept: "bg-blue-500/20 text-blue-400 border-blue-500/30",
     dream: "bg-purple-500/20 text-purple-400 border-purple-500/30",
   };
 
   const stageLabels = {
+    live: "Live",
     ready: "Ready Soon",
     prototype: "Prototype Phase",
     concept: "Concept",
@@ -59,12 +62,23 @@ const ProductCard = ({ icon: Icon, name, description, stage, linkHref, linkText 
       <h3 className="font-serif font-semibold mb-1">{name}</h3>
       <p className="text-sm text-muted-foreground mb-3">{description}</p>
       {linkHref && (
-        <Link
-          to={linkHref}
-          className="inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
-        >
-          {linkText || "Learn More"} <ArrowRight className="w-4 h-4" />
-        </Link>
+        linkHref.startsWith("http") ? (
+          <a
+            href={linkHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
+          >
+            {linkText || "Learn More"} <ExternalLink className="w-4 h-4" />
+          </a>
+        ) : (
+          <Link
+            to={linkHref}
+            className="inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
+          >
+            {linkText || "Learn More"} <ArrowRight className="w-4 h-4" />
+          </Link>
+        )
       )}
     </div>
   );
@@ -89,6 +103,16 @@ const ComingSoon = () => {
     },
   ];
 
+  const liveProducts = [
+    {
+      icon: Box,
+      name: "QCore",
+      description: "Quality control and verification infrastructure for AI-generated outputs. Designed to detect errors, inconsistencies, and trust breakdowns before results are used or shared.",
+      linkHref: "https://qcore.ruthlesstechnologies.com",
+      linkText: "Visit QCore",
+    },
+  ];
+
   const prototypeProducts = [
     {
       icon: Shield,
@@ -96,11 +120,6 @@ const ComingSoon = () => {
       description: "A managed, web-based version of our free Child Safety AI Prompt Pack. No downloads, no setup — just safe, supervised AI access for children. Child safety comes first. This system will either remain free or be priced only to cover operational costs. There is no profit motive.",
       linkHref: "/child-safety",
       linkText: "Get the Free Prompt Pack Now",
-    },
-    {
-      icon: Box,
-      name: "QCore",
-      description: "Quality control and verification infrastructure for AI-generated outputs. Designed to detect errors, inconsistencies, and trust breakdowns before results are used or shared.",
     },
     {
       icon: Store,
@@ -159,9 +178,27 @@ const ComingSoon = () => {
         </div>
       </HeroSection>
 
-      {/* Ready Soon */}
+      {/* Live */}
       <section className="py-20 bg-card">
         <div className="section-container">
+          <SectionHeader
+            title="Live"
+            subtitle="Products that are live and available now."
+          />
+          <div className="grid md:grid-cols-1 gap-6 max-w-2xl mx-auto mb-16">
+            {liveProducts.map((product) => (
+              <ProductCard
+                key={product.name}
+                icon={product.icon}
+                name={product.name}
+                description={product.description}
+                stage="live"
+                linkHref={product.linkHref}
+                linkText={product.linkText}
+              />
+            ))}
+          </div>
+
           <SectionHeader
             title="Ready Soon"
             subtitle="Products nearing completion with limited early access coming."

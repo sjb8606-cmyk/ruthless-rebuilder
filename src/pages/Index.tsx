@@ -23,6 +23,7 @@ import {
   ClipboardList,
   PackageCheck,
   Users,
+  Box,
 } from "lucide-react";
 
 const Index = () => {
@@ -143,8 +144,8 @@ const Index = () => {
               href="/services"
             />
           </div>
-          {/* Bottom row - 2 cards centered */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          {/* Bottom row - 3 cards */}
+          <div className="grid md:grid-cols-3 gap-6">
             <ServiceCard
               icon={FileText}
               title="Website & Business Copy"
@@ -158,6 +159,14 @@ const Index = () => {
               subtitle="Content Systems"
               description="Repurposing, hooks, calendars, scripts — without burnout."
               href="/services"
+            />
+            <ServiceCard
+              icon={Box}
+              title="QCore"
+              subtitle="Live"
+              description="Deterministic decision verification and audit infrastructure for high-stakes AI and automation systems."
+              href="https://qcore.ruthlesstechnologies.com"
+              linkText="Visit QCore"
             />
           </div>
           <div className="text-center mt-10">
