@@ -11,6 +11,8 @@ import {
   ArrowRight,
   CheckCircle2,
   Shield,
+  Box,
+  ExternalLink,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { LucideIcon } from "lucide-react";
@@ -64,12 +66,23 @@ const ServiceDetail = ({
         ))}
       </ul>
       {linkHref && (
-        <Link
-          to={linkHref}
-          className="inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
-        >
-          {linkText || "Learn More"} <ArrowRight className="w-4 h-4" />
-        </Link>
+        linkHref.startsWith("http") ? (
+          <a
+            href={linkHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
+          >
+            {linkText || "Learn More"} <ExternalLink className="w-4 h-4" />
+          </a>
+        ) : (
+          <Link
+            to={linkHref}
+            className="inline-flex items-center gap-1 text-sm text-primary hover:gap-2 transition-all"
+          >
+            {linkText || "Learn More"} <ArrowRight className="w-4 h-4" />
+          </Link>
+        )
       )}
     </div>
   );
@@ -77,6 +90,21 @@ const ServiceDetail = ({
 
 const Services = () => {
   const services = [
+    {
+      icon: Box,
+      title: "QCore (Platform)",
+      subtitle: "Live",
+      description:
+        "A verification engine that evaluates decisions against explicit rules and policies. Designed for regulated industries, high-risk systems, and AI governance workflows.",
+      features: [
+        "Deterministic decision verification",
+        "Policy-driven authorization gates",
+        "Tamper-evident audit receipts",
+        "Configurable compliance workflows",
+      ],
+      linkHref: "https://qcore.ruthlesstechnologies.com",
+      linkText: "Visit QCore",
+    },
     {
       icon: Bot,
       title: "Ops Assistant",
