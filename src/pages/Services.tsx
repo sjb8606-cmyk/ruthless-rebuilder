@@ -98,7 +98,7 @@ const Services = () => {
   const services: ServiceDetailProps[] = [
     {
       icon: Box,
-      title: "QCore (Platform)",
+      title: "Veridact (Platform)",
       subtitle: "Live",
       description:
         "A verification engine that evaluates decisions against explicit rules and policies. Designed for regulated industries, high-risk systems, and AI governance workflows.",
@@ -108,9 +108,9 @@ const Services = () => {
         "Tamper-evident audit receipts",
         "Configurable compliance workflows",
       ],
-      linkHref: "https://qcore.ruthlesstechnologies.com",
-      linkText: "Visit QCore",
-      bobText: "If AI or automation makes decisions in your business, QCore checks them against your policies first. This makes the process traceable and easier to audit.",
+      linkHref: "https://veridact.ruthlesstechnologies.com",
+      linkText: "Visit Veridact",
+      bobText: "If AI or automation makes decisions in your business, Veridact checks them against your policies first. This makes the process traceable and easier to audit.",
     },
     {
       icon: Bot,
