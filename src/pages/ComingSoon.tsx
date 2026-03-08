@@ -106,10 +106,10 @@ const ComingSoon = () => {
   const liveProducts = [
     {
       icon: Box,
-      name: "QCore",
+      name: "Veridact",
       description: "Quality control and verification infrastructure for AI-generated outputs. Designed to detect errors, inconsistencies, and trust breakdowns before results are used or shared.",
-      linkHref: "https://qcore.ruthlesstechnologies.com",
-      linkText: "Visit QCore",
+      linkHref: "https://veridact.ruthlesstechnologies.com",
+      linkText: "Visit Veridact",
     },
   ];
 

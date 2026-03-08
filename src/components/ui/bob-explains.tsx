@@ -101,7 +101,7 @@ const BobHeroCallout = ({ className }: BobHeroCalloutProps) => {
                       </p>
                     </div>
                     <div>
-                      <p className="font-medium text-foreground text-sm">QCore</p>
+                      <p className="font-medium text-foreground text-sm">Veridact</p>
                       <p className="text-sm text-muted-foreground">
                         A system that records and verifies important AI decisions so there is proof of what happened and nobody gets blamed for something a machine did.
                       </p>

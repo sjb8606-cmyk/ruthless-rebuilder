@@ -200,14 +200,14 @@ const Index = () => {
             <div>
               <ServiceCard
                 icon={Box}
-                title="QCore"
+                title="Veridact"
                 subtitle="Live"
                 description="Deterministic decision verification and audit infrastructure for high-stakes AI and automation systems."
-                href="https://qcore.ruthlesstechnologies.com"
-                linkText="Visit QCore"
+                href="https://veridact.ruthlesstechnologies.com"
+                linkText="Visit Veridact"
               />
               <BobExplains>
-                When AI is involved in important decisions, QCore checks those decisions against defined rules. It also records proof so the process can be reviewed later if needed.
+                When AI is involved in important decisions, Veridact checks those decisions against defined rules. It also records proof so the process can be reviewed later if needed.
               </BobExplains>
             </div>
           </div>
