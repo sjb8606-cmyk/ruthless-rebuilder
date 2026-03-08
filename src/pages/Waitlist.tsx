@@ -23,7 +23,7 @@ const Waitlist = () => {
     "Service Bots",
     "Pet Planner AI",
     "Delight Engine",
-    "QCore",
+    "Veridact",
     "AgoraX",
     "CrystalForge",
     "AegisForge",
