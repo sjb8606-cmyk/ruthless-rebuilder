@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { HeroSection } from "@/components/ui/hero-section";
 import { SectionHeader } from "@/components/ui/section-header";
 import Layout from "@/components/layout/Layout";
+import { BobExplains } from "@/components/ui/bob-explains";
 import {
   ArrowRight,
   Target,
@@ -171,6 +172,9 @@ const Capabilities = () => {
             <p className="text-muted-foreground mb-6">
               AI accelerates delivery. But every critical output is verified by a human before it ships.
             </p>
+            <BobExplains className="text-left mb-6">
+              AI helps accelerate work, but humans verify the results before delivery. This approach keeps automation useful while maintaining reliability.
+            </BobExplains>
             <div className="grid sm:grid-cols-2 gap-4 text-left">
               {[
                 "No autonomous agents without checkpoints",

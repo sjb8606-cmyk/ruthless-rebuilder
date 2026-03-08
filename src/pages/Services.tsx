@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { HeroSection } from "@/components/ui/hero-section";
 import Layout from "@/components/layout/Layout";
+import { BobExplains } from "@/components/ui/bob-explains";
 import {
   Bot,
   Code2,
@@ -26,6 +27,7 @@ interface ServiceDetailProps {
   linkHref?: string;
   linkText?: string;
   isFree?: boolean;
+  bobText?: string;
 }
 
 const ServiceDetail = ({
@@ -37,6 +39,7 @@ const ServiceDetail = ({
   linkHref,
   linkText,
   isFree,
+  bobText,
 }: ServiceDetailProps) => {
   return (
     <div className="card-hostile">
@@ -84,12 +87,15 @@ const ServiceDetail = ({
           </Link>
         )
       )}
+      {bobText && (
+        <BobExplains>{bobText}</BobExplains>
+      )}
     </div>
   );
 };
 
 const Services = () => {
-  const services = [
+  const services: ServiceDetailProps[] = [
     {
       icon: Box,
       title: "QCore (Platform)",
@@ -104,6 +110,7 @@ const Services = () => {
       ],
       linkHref: "https://qcore.ruthlesstechnologies.com",
       linkText: "Visit QCore",
+      bobText: "If AI or automation makes decisions in your business, QCore checks them against your policies first. This makes the process traceable and easier to audit.",
     },
     {
       icon: Bot,
@@ -118,6 +125,7 @@ const Services = () => {
         "SOP creation and maintenance",
         "Follow-up sequences and reminders",
       ],
+      bobText: "Helps manage email, scheduling, research, and administrative work. Automation speeds up the process while human review maintains quality.",
     },
     {
       icon: Code2,
@@ -134,6 +142,7 @@ const Services = () => {
       ],
       linkHref: "/prompt-engineering",
       linkText: "See Proof",
+      bobText: "Reliable AI systems need structured prompts and clear rules. We build those instruction systems so AI tools produce consistent results.",
     },
     {
       icon: Rocket,
@@ -148,6 +157,7 @@ const Services = () => {
         "Docker containerization",
         "Documentation and handoff notes",
       ],
+      bobText: "If you have an idea for a software product, we build the technical foundation quickly. This gives you a working base that developers can expand later.",
     },
     {
       icon: Globe,
@@ -162,6 +172,7 @@ const Services = () => {
         "Value proposition refinement",
         "Conversion-focused copywriting",
       ],
+      bobText: "Clear messaging helps visitors understand your business and take action. This service focuses on making your website easier to understand and more effective.",
     },
     {
       icon: Video,
@@ -176,6 +187,7 @@ const Services = () => {
         "Platform-specific adaptation",
         "Engagement optimization",
       ],
+      bobText: "Content creation becomes easier when it follows a system. We help organize ideas, scripts, and schedules so content can be produced consistently.",
     },
     {
       icon: Shield,
@@ -210,6 +222,9 @@ const Services = () => {
             <Link to="/pricing">See Pricing</Link>
           </Button>
         </div>
+        <BobExplains className="mt-4 text-left max-w-2xl mx-auto">
+          Many tools work in demonstrations but fail in daily operations. These systems are designed for real workloads where reliability matters.
+        </BobExplains>
       </HeroSection>
 
       <section className="py-20">
