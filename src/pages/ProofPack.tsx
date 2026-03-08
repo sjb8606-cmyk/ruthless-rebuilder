@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { HeroSection } from "@/components/ui/hero-section";
 import { SectionHeader } from "@/components/ui/section-header";
 import Layout from "@/components/layout/Layout";
+import { BobExplains } from "@/components/ui/bob-explains";
 import {
   FileText,
   Settings,
@@ -43,6 +44,9 @@ const ProofPack = () => {
         <p className="text-xs text-muted-foreground mt-6">
           Proof over vibes. Trust is engineered.
         </p>
+        <BobExplains className="mt-4 text-left max-w-2xl mx-auto">
+          When a project is delivered, you receive documentation showing what was built and how it was verified. This reduces uncertainty and makes the system easier to maintain.
+        </BobExplains>
       </HeroSection>
 
       {/* What Is It */}

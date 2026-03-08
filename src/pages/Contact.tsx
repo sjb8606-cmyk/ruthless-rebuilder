@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { HeroSection } from "@/components/ui/hero-section";
 import { SectionHeader } from "@/components/ui/section-header";
 import Layout from "@/components/layout/Layout";
+import { BobExplains } from "@/components/ui/bob-explains";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, ArrowRight } from "lucide-react";
 
@@ -52,6 +53,9 @@ const Contact = () => {
         <p className="text-xs text-muted-foreground mt-4">
           No phone required. Fast responses.
         </p>
+        <BobExplains className="mt-4 text-left max-w-2xl mx-auto">
+          Send an email describing what you need. You will receive a clear recommendation, scope, and pricing guidance.
+        </BobExplains>
       </HeroSection>
 
       <section className="py-20">

@@ -6,6 +6,7 @@ import { PricingCard } from "@/components/ui/pricing-card";
 import Layout from "@/components/layout/Layout";
 import { Badge } from "@/components/ui/badge";
 import { ImpactSection } from "@/components/ui/impact-section";
+import { BobExplains } from "@/components/ui/bob-explains";
 import { XCircle, CreditCard, ArrowRight } from "lucide-react";
 
 const Pricing = () => {
@@ -23,6 +24,7 @@ const Pricing = () => {
         "1 revision pass (scoped)",
       ],
       commonUses: "Architecture review • Prompt systems • Workflow planning",
+      bobText: "This tier focuses on reviewing your systems and identifying risks or improvements. You receive recommendations and a clear plan.",
     },
     {
       tier: "Tier 2",
@@ -37,6 +39,7 @@ const Pricing = () => {
       ],
       commonUses: "Backend prototypes • Business ops systems • Creator content systems",
       popular: true,
+      bobText: "A fast project that delivers a working technical foundation. It is designed to help move an idea into a functional prototype quickly.",
     },
     {
       tier: "Tier 3",
@@ -51,6 +54,7 @@ const Pricing = () => {
         "2 revision passes (scoped)",
       ],
       commonUses: "Larger prototypes • Multi-system installs • Integration-heavy delivery",
+      bobText: "A larger project with deeper implementation and more verification. This tier is used when systems require stronger governance or integration.",
     },
   ];
 
@@ -116,6 +120,9 @@ const Pricing = () => {
         <p className="text-xs text-muted-foreground mt-6">
           Clarity over confusion. Scope beats ambition. Safety is a feature.
         </p>
+        <BobExplains className="mt-4 text-left max-w-2xl mx-auto">
+          You know what the project will cost before it begins. Pricing does not change unless the scope of the work changes.
+        </BobExplains>
       </HeroSection>
 
       {/* Contract Services */}
@@ -127,17 +134,19 @@ const Pricing = () => {
           />
           <div className="grid md:grid-cols-3 gap-6">
             {contractTiers.map((tier) => (
-              <PricingCard
-                key={tier.tier}
-                tier={tier.tier}
-                title={tier.title}
-                price={tier.price}
-                bestFor={tier.bestFor}
-                includes={tier.includes}
-                commonUses={tier.commonUses}
-                popular={tier.popular}
-                ctaText={`Request ${tier.tier}`}
-              />
+              <div key={tier.tier}>
+                <PricingCard
+                  tier={tier.tier}
+                  title={tier.title}
+                  price={tier.price}
+                  bestFor={tier.bestFor}
+                  includes={tier.includes}
+                  commonUses={tier.commonUses}
+                  popular={tier.popular}
+                  ctaText={`Request ${tier.tier}`}
+                />
+                <BobExplains>{tier.bobText}</BobExplains>
+              </div>
             ))}
           </div>
         </div>

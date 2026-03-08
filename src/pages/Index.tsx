@@ -7,6 +7,7 @@ import { ProcessStep } from "@/components/ui/process-step";
 import { FeatureCard } from "@/components/ui/feature-card";
 import Layout from "@/components/layout/Layout";
 import { ImpactSection } from "@/components/ui/impact-section";
+import { BobExplains, BobHeroCallout, BobFinalWord } from "@/components/ui/bob-explains";
 import {
   Target,
   Shield,
@@ -47,7 +48,13 @@ const Index = () => {
         <p className="text-xs text-muted-foreground mt-6">
           No hype. No chaos. Just work that ships.
         </p>
+        <BobExplains className="mt-4 text-left max-w-2xl mx-auto">
+          Most software works fine when everything is perfect. These systems are built to keep working when things go wrong — outages, bad inputs, or security issues. AI helps build them faster, but a real person checks the results before delivery.
+        </BobExplains>
       </HeroSection>
+
+      {/* Bob Hero Callout */}
+      <BobHeroCallout />
 
       {/* Email First Banner */}
       <section className="py-6 border-y border-border bg-card/50">
@@ -63,21 +70,36 @@ const Index = () => {
         <div className="section-container">
           <SectionHeader title="Why Ruthless" />
           <div className="grid md:grid-cols-3 gap-6">
-            <FeatureCard
-              icon={Target}
-              title="Scope Beats Ambition"
-              description="Most projects fail from uncontrolled scope. We ship bounded deliverables with clear constraints — no endless revisions."
-            />
-            <FeatureCard
-              icon={Shield}
-              title="Safety Over Autonomy"
-              description="No rogue agents. No black boxes. Human-in-the-loop verification is built into every delivery."
-            />
-            <FeatureCard
-              icon={FileCheck}
-              title="Proof Over Vibes"
-              description="When it matters, we don't just claim. We verify, document, and hand off with evidence."
-            />
+            <div>
+              <FeatureCard
+                icon={Target}
+                title="Scope Beats Ambition"
+                description="Most projects fail from uncontrolled scope. We ship bounded deliverables with clear constraints — no endless revisions."
+              />
+              <BobExplains>
+                Projects fail when the work keeps expanding and never finishes. We define exactly what will be delivered before we start, then complete it and hand it over. Clear boundaries keep projects on time and on budget.
+              </BobExplains>
+            </div>
+            <div>
+              <FeatureCard
+                icon={Shield}
+                title="Safety Over Autonomy"
+                description="No rogue agents. No black boxes. Human-in-the-loop verification is built into every delivery."
+              />
+              <BobExplains>
+                AI is used to assist the work, not run things on its own. Every important result is reviewed by a real person before it reaches you. That keeps automation useful without creating risk.
+              </BobExplains>
+            </div>
+            <div>
+              <FeatureCard
+                icon={FileCheck}
+                title="Proof Over Vibes"
+                description="When it matters, we don't just claim. We verify, document, and hand off with evidence."
+              />
+              <BobExplains>
+                Instead of saying something works, we show proof. You receive documentation, verification notes, and clear instructions so you know exactly what was built and how it works.
+              </BobExplains>
+            </div>
           </div>
         </div>
       </section>
@@ -89,6 +111,9 @@ const Index = () => {
             <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-center">
               Built for Builders Who Can't Afford Chaos
             </h2>
+            <BobExplains className="mb-6">
+              Some businesses can tolerate software failures. Others cannot. These systems are built for situations where reliability matters because mistakes cost time, money, or reputation.
+            </BobExplains>
             <p className="text-muted-foreground text-center mb-8">
               Most founders don't need more tools. They need systems that won't break under pressure.
             </p>
@@ -121,28 +146,40 @@ const Index = () => {
           />
           {/* Top row - 3 cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-6">
-            <ServiceCard
-              icon={Bot}
-              title="Ops Assistant"
-              subtitle="Automation-Enhanced VA"
-              description="Inbox, scheduling, research, docs, follow-ups — human verified."
-              href="/services"
-            />
-            <ServiceCard
-              icon={Code2}
-              title="Prompt Engineering"
-              subtitle="Prompt Systems"
-              description="Production-grade prompts built for real workflows — bounded, testable, and injection-aware."
-              href="/prompt-engineering"
-              linkText="See Proof"
-            />
-            <ServiceCard
-              icon={Rocket}
-              title="Backend Prototype Sprint"
-              subtitle="AI / SaaS MVP Foundation"
-              description="A working backend prototype in 1–2 weeks with clean handoff."
-              href="/services"
-            />
+            <div>
+              <ServiceCard
+                icon={Bot}
+                title="Ops Assistant"
+                subtitle="Automation-Enhanced VA"
+                description="Inbox, scheduling, research, docs, follow-ups — human verified."
+                href="/services"
+              />
+              <BobExplains>
+                This is like having a virtual assistant supported by AI tools. The automation handles routine tasks quickly, and a human reviews the results before sending them to you.
+              </BobExplains>
+            </div>
+            <div>
+              <ServiceCard
+                icon={Code2}
+                title="Prompt Engineering"
+                subtitle="Prompt Systems"
+                description="Production-grade prompts built for real workflows — bounded, testable, and injection-aware."
+                href="/prompt-engineering"
+                linkText="See Proof"
+              />
+              <BobExplains>
+                AI tools work better when they are given clear instructions. We design structured prompts so the AI produces consistent, reliable results instead of unpredictable ones.
+              </BobExplains>
+            </div>
+            <div>
+              <ServiceCard
+                icon={Rocket}
+                title="Backend Prototype Sprint"
+                subtitle="AI / SaaS MVP Foundation"
+                description="A working backend prototype in 1–2 weeks with clean handoff."
+                href="/services"
+              />
+            </div>
           </div>
           {/* Bottom row - 3 cards */}
           <div className="grid md:grid-cols-3 gap-6">
@@ -160,14 +197,19 @@ const Index = () => {
               description="Repurposing, hooks, calendars, scripts — without burnout."
               href="/services"
             />
-            <ServiceCard
-              icon={Box}
-              title="QCore"
-              subtitle="Live"
-              description="Deterministic decision verification and audit infrastructure for high-stakes AI and automation systems."
-              href="https://qcore.ruthlesstechnologies.com"
-              linkText="Visit QCore"
-            />
+            <div>
+              <ServiceCard
+                icon={Box}
+                title="QCore"
+                subtitle="Live"
+                description="Deterministic decision verification and audit infrastructure for high-stakes AI and automation systems."
+                href="https://qcore.ruthlesstechnologies.com"
+                linkText="Visit QCore"
+              />
+              <BobExplains>
+                When AI is involved in important decisions, QCore checks those decisions against defined rules. It also records proof so the process can be reviewed later if needed.
+              </BobExplains>
+            </div>
           </div>
           <div className="text-center mt-10">
             <Button asChild size="lg">
@@ -192,6 +234,9 @@ const Index = () => {
             <p className="text-muted-foreground mb-8">
               Some tools are infrastructure-first. Others are designed for everyday use. All are built under the same hostile-environment doctrine.
             </p>
+            <BobExplains className="text-left mb-8">
+              Alongside client work, the company is building its own software products. Some are for businesses, and others are for everyday users.
+            </BobExplains>
             <Button asChild size="lg">
               <Link to="/coming-soon">
                 Explore products in development <ArrowRight className="ml-2 h-4 w-4" />
@@ -203,6 +248,11 @@ const Index = () => {
 
       {/* Impact Section */}
       <ImpactSection />
+      <div className="section-container">
+        <BobExplains className="mb-8">
+          A portion of verified profits goes toward causes like veteran support, elder care, and conservation. Donations are tracked and documented so they can be verified.
+        </BobExplains>
+      </div>
 
       {/* How It Works */}
       <section className="py-20 bg-card">
@@ -236,6 +286,12 @@ const Index = () => {
               description="If needed, we continue monthly. If not, we close clean."
             />
           </div>
+          <BobExplains className="max-w-2xl mx-auto mt-8">
+            <p>You send a short email explaining what you need.</p>
+            <p>You receive a clear scope, price range, and timeline.</p>
+            <p>The work is delivered with verification notes.</p>
+            <p>Ongoing support is optional.</p>
+          </BobExplains>
           <div className="text-center mt-12">
             <Button asChild size="lg">
               <a href="mailto:ruthlesstechnologies@proton.me">
@@ -340,6 +396,7 @@ const Index = () => {
           <p className="text-xs text-muted-foreground mt-6">
             Clear scope. Fixed deliverables. Human verification.
           </p>
+          <BobFinalWord className="mt-6" />
         </div>
       </section>
     </Layout>
