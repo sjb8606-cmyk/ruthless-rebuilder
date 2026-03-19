@@ -13,6 +13,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const mainLinks = [
+    { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Pricing", href: "/pricing" },
     { name: "Coming Soon", href: "/coming-soon" },
