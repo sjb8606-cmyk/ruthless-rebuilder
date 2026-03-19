@@ -19,6 +19,7 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import ChildSafety from "./pages/ChildSafety";
+import About from "./pages/About";
 
 const queryClient = new QueryClient();
 
