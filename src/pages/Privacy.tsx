@@ -41,6 +41,13 @@ const Privacy = () => {
               </section>
 
               <section>
+                <h2 className="font-serif text-xl font-bold mb-3">Advertising and Cookies</h2>
+                <p className="text-muted-foreground mb-2"><span className="font-medium text-foreground">Google AdSense:</span> We use Google AdSense to serve advertisements. Google, as a third-party vendor, uses cookies to serve ads on our site. Google's use of the DART cookie enables it to serve ads to our users based on their visit to this site and other sites on the Internet.</p>
+                <p className="text-muted-foreground mb-2"><span className="font-medium text-foreground">Opt-Out:</span> Users may choose to opt out of the use of the DART cookie by visiting the Google Ad and Content Network privacy policy at <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://policies.google.com/technologies/ads</a>.</p>
+                <p className="text-muted-foreground">We also use cookies to store information about visitor preferences and record user-specific information on which pages the user accesses or visits.</p>
+              </section>
+
+              <section>
                 <h2 className="font-serif text-xl font-bold mb-3">Data Retention</h2>
                 <ul className="text-muted-foreground space-y-1">
                   <li>• Active project data: Duration of engagement + 1 year</li>
