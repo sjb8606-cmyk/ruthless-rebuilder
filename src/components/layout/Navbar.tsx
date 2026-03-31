@@ -75,6 +75,24 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Tools <ChevronDown className="h-4 w-4" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-56">
+                {toolsLinks.map((link) => (
+                  <DropdownMenuItem key={link.name} asChild>
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="w-full flex flex-col items-start">
+                      <span className="font-medium">{link.name}</span>
+                      <span className="text-xs text-muted-foreground">{link.description}</span>
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Button asChild size="sm">
               <a href="mailto:ruthlesstechnologies@proton.me">Email Us</a>
             </Button>
