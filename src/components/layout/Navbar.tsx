@@ -9,6 +9,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+const toolsLinks = [
+  { name: "Calqru", href: "https://calqru.ruthlesstechnologies.com", description: "Construction Calculators" },
+  { name: "Meridex", href: "https://meridex.ruthlesstechnologies.com", description: "Economic Intelligence" },
+];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
