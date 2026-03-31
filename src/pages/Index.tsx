@@ -221,6 +221,45 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Ruthless Utility Tools */}
+      <section className="py-20">
+        <div className="section-container">
+          <SectionHeader
+            title="Introducing Ruthless Utility Tools"
+            subtitle="Explore our suite of live, AI-assisted and professional tools designed for builders, investors, and operators who need fast, reliable insights. Start using our utilities today."
+          />
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <a
+              href="https://calqru.ruthlesstechnologies.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-hostile p-6 flex items-start gap-4 hover:border-primary/50 transition-colors group"
+            >
+              <span className="text-3xl">🧮</span>
+              <div>
+                <h3 className="font-serif text-lg font-bold mb-1 group-hover:text-primary transition-colors">Calqru</h3>
+                <p className="text-sm text-muted-foreground">66+ construction calculators for material, labor, and code compliance.</p>
+              </div>
+            </a>
+            <a
+              href="https://meridex.ruthlesstechnologies.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-hostile p-6 flex items-start gap-4 hover:border-primary/50 transition-colors group"
+            >
+              <span className="text-3xl">🌐</span>
+              <div>
+                <h3 className="font-serif text-lg font-bold mb-1 group-hover:text-primary transition-colors">Meridex</h3>
+                <p className="text-sm text-muted-foreground">Global economic intelligence and regional investment calculators.</p>
+              </div>
+            </a>
+          </div>
+          <p className="text-xs text-muted-foreground text-center mt-6 italic">
+            More tools launching soon. Built under the same hostile-environment doctrine.
+          </p>
+        </div>
+      </section>
+
       {/* Products in Development */}
       <section className="py-20 bg-card">
         <div className="section-container">

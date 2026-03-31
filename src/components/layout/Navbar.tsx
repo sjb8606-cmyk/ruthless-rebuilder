@@ -9,6 +9,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+const toolsLinks = [
+  { name: "Calqru", href: "https://calqru.ruthlesstechnologies.com", description: "Construction Calculators" },
+  { name: "Meridex", href: "https://meridex.ruthlesstechnologies.com", description: "Economic Intelligence" },
+];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -70,6 +75,24 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Tools <ChevronDown className="h-4 w-4" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-56">
+                {toolsLinks.map((link) => (
+                  <DropdownMenuItem key={link.name} asChild>
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="w-full flex flex-col items-start">
+                      <span className="font-medium">{link.name}</span>
+                      <span className="text-xs text-muted-foreground">{link.description}</span>
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Button asChild size="sm">
               <a href="mailto:ruthlesstechnologies@proton.me">Email Us</a>
             </Button>
@@ -110,6 +133,22 @@ const Navbar = () => {
                   >
                     {link.name}
                   </Link>
+                ))}
+              </div>
+              <div className="border-t border-border pt-3 mt-2">
+                <span className="text-xs text-muted-foreground uppercase tracking-wider">Tools</span>
+                {toolsLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                    <span className="block text-xs text-muted-foreground/70">{link.description}</span>
+                  </a>
                 ))}
               </div>
               <Button asChild size="sm" className="mt-4">
