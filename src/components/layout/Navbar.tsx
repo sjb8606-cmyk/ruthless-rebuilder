@@ -135,6 +135,22 @@ const Navbar = () => {
                   </Link>
                 ))}
               </div>
+              <div className="border-t border-border pt-3 mt-2">
+                <span className="text-xs text-muted-foreground uppercase tracking-wider">Tools</span>
+                {toolsLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-sm text-muted-foreground hover:text-foreground transition-colors py-2"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                    <span className="block text-xs text-muted-foreground/70">{link.description}</span>
+                  </a>
+                ))}
+              </div>
               <Button asChild size="sm" className="mt-4">
                 <a href="mailto:ruthlesstechnologies@proton.me">Email Us</a>
               </Button>
